@@ -1,0 +1,38 @@
+import csv
+
+heading=['Sid','Sname','City','Contect']
+data=[[101,'Param','surat',12345],[102,'brijal','surat',12344],[103,'Heer','surat',12335],[104,'Pratham','surat',12245],[105,'Pinal','surat',11345]]
+
+open('c:/sqlite/CSV/Student.csv','x')
+
+with open('c:/sqlite/CSV/Student.csv','w',newline='') as file:
+    w=csv.writer(file)
+    w.writerow(heading)
+    w.writerows(data)
+
+with open('c:/sqlite/CSV/Student.csv','r',newline='') as file:
+    content = file.read()
+    print(content)
+
+Sid,Sname,City,Contect
+101,Urvi,surat,9898989898
+102,Vihan,bardoli,9797979797
+103,kinju,kamrej,9696969696
+104,Sujal,vav,9595959595
+105,Bhumi,surat,9494949494
+
+
+for i in range(5):
+	id=int(input("Enter Id:"))
+	name=input("Enter Name:")
+	city=input("Enter City:")
+	contact=int(input("Enter Contact No.:"))
+	sub_list=[id,name,city,contact]
+	
+
+Sid,Sname,City,Contect
+101,Urvi,surat,9898989898
+102,Vihan,bardoli,9797979797
+103,kinju,kamrej,9696969696
+104,Sujal,vav,9595959595
+105,Bhumi,surat,9494949494
